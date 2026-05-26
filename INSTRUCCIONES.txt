@@ -1,0 +1,106 @@
+# 📺 TV FAVORITO — Instrucciones de instalación
+
+## ¿Qué vas a tener al final?
+Un enlace como este que tu familia pone en su app IPTV:
+  https://tu-app.up.railway.app/lista?user=mama&pass=clave123
+
+---
+
+## PASO 1 — Crear cuenta gratuita en GitHub
+1. Ve a https://github.com y haz clic en "Sign up"
+2. Crea tu cuenta (es gratis, solo necesitas un email)
+
+---
+
+## PASO 2 — Subir los archivos a GitHub
+1. Una vez en GitHub, haz clic en el botón verde "New" (crear repositorio)
+2. Ponle el nombre: tv-favorito
+3. Márcalo como PRIVADO (Private) — importante para que nadie vea tus archivos
+4. Haz clic en "Create repository"
+5. Busca la opción "uploading an existing file" y sube TODOS estos archivos:
+   - main.py
+   - requirements.txt
+   - Procfile
+   - nixpacks.toml
+   - lista.m3u
+6. Haz clic en "Commit changes" para guardar
+
+---
+
+## PASO 3 — Crear cuenta en Railway y conectar
+1. Ve a https://railway.app
+2. Haz clic en "Start a New Project"
+3. Elige "Sign in with GitHub" (usa la cuenta que acabas de crear)
+4. Acepta los permisos que pide
+5. Haz clic en "Deploy from GitHub repo"
+6. Selecciona tu repositorio "tv-favorito"
+7. Railway detecta automáticamente que es Python y lo configura solo
+8. Espera ~2 minutos mientras se despliega
+
+---
+
+## PASO 4 — Obtener tu URL
+1. En Railway, entra a tu proyecto
+2. Ve a Settings → Networking → Generate Domain
+3. Te dará una URL como: https://tv-favorito-production.up.railway.app
+4. ¡Esa es tu URL base!
+
+---
+
+## PASO 5 — Cambiar usuarios y contraseñas (opcional)
+Abre el archivo main.py y busca esta sección:
+
+  USUARIOS = {
+      "mama":    "clave123",
+      "papa":    "clave456",
+      "hermano": "clave789",
+      "yo":      "miclaveadmin",
+  }
+
+Cambia los nombres y claves que quieras, guarda y Railway actualiza automáticamente.
+
+---
+
+## PASO 6 — Compartir con tu familia
+Envíales esta información:
+
+  App recomendada:  IPTV Smarters Pro o Tivimate
+  URL de la lista:  https://TU-URL.up.railway.app/lista?user=USUARIO&pass=CONTRASEÑA
+
+  Ejemplo para mamá:
+  https://tv-favorito-production.up.railway.app/lista?user=mama&pass=clave123
+
+  O pueden entrar a la página web y obtener su enlace ellos mismos:
+  https://tv-favorito-production.up.railway.app
+
+---
+
+## Cómo poner la lista en las apps IPTV
+
+### Tivimate (Android TV / FireStick):
+1. Abrir Tivimate → Add playlist
+2. Pegar la URL completa con usuario y contraseña
+3. Listo, se cargan todos los canales organizados por país
+
+### IPTV Smarters Pro (iOS / Android / PC):
+1. Abrir la app → Add User
+2. Elegir "M3U URL"
+3. Pegar la URL completa
+4. Guardar
+
+### GSE Smart IPTV (iOS / Apple TV / Android):
+1. Remote Playlists → + → Add M3U URL
+2. Pegar la URL completa
+3. Guardar
+
+---
+
+## Plan gratuito de Railway
+- Incluye $5 USD de crédito al mes
+- Un servidor pequeño como este gasta ~$0.50/mes
+- Efectivamente es GRATIS para siempre con uso normal
+
+---
+
+## ¿Necesitas ayuda?
+Si algo no funciona, describe el problema y con gusto te ayudo.
